@@ -1,0 +1,338 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Blog Posts
+  1.1 Layout
+  1.2 Post Content
+  1.3 Post Excerpt
+  1.4 Sidebar
+2.0 Lyrics Page
+  2.1 Layout
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+1.0 Blog Posts
+--------------------------------------------------------------*/
+
+/** 
+  * 1.1 Layout
+  *
+  */
+
+.blog-container {
+  margin-top: var(--section-margin-top-bottom);
+  margin-bottom: var(--section-margin-top-bottom);
+}
+
+/* Desktop Only */
+@media (min-width: 1024px) {
+  .blog__content {
+    grid-area: content;
+    justify-self: end;
+    margin-inline: auto;
+  }
+
+  .has-sidebar {
+    display: grid;
+    grid-template-columns: auto 0.7fr;
+    grid-template-areas: "content sidebar";
+  }
+}
+
+/** 
+  * 1.2 Post Content
+  *
+  */
+.post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+}
+
+.post__image {
+  width: 100vw;
+  max-width: 1000px;
+  height: 300px;
+
+  object-fit: cover;
+
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  clip-path: inset(1em 1em 2em round 1.5em);
+}
+
+.post__content {
+  width: calc(100% - 3.2rem);
+  margin-inline: auto;
+}
+
+/* Fix too much space on top of post heading*/
+.post__content h1 {
+  margin-top: 2rem;
+}
+
+.post__author-img {
+  grid-area: author-img;
+
+  margin-right: 2.8rem;
+  max-width: 10rem;
+  height: auto;
+}
+
+.post__author-name {
+  grid-area: author-name;
+  align-self: flex-end;
+
+  font-size: var(--size-h4);
+  font-family: var(--font-heading);
+  color: var(--clr-text-primary);
+
+  line-height: 1;
+}
+
+.post__date {
+  grid-area: date;
+  align-self: flex-start;
+
+  font-size: var(--size-p);
+  font-family: var(--font-text);
+  color: var(--clr-text-primary);
+}
+
+.post__meta {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-areas:
+    "author-img author-name"
+    "author-img date";
+
+  justify-content: start;
+  align-items: center;
+
+  max-width: 40rem;
+}
+
+.post__tags {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+
+  font-family: var(--font-heading);
+  font-size: var(--size-p);
+  color: var(--clr-text-primary);
+}
+
+.tag--hashtag::before {
+  content: "#";
+}
+
+.post__next-prev {
+  font-family: var(--font-heading);
+  font-size: var(--size-p);
+
+  width: 100%;
+  max-width: 80rem;
+
+  padding-left: var(--section-margin-left-right);
+  padding-right: var(--section-margin-left-right);
+
+  margin-top: 1rem;
+  margin-bottom: var(--section-margin-top-bottom);
+}
+
+.post__next-prev .nav-links {
+  display: grid;
+  flex-direction: row;
+
+  width: 100%;
+}
+
+.post__next-prev .nav-previous {
+  grid-area: 1 / 1;
+  align-self: center;
+  justify-self: start;
+}
+
+.post__next-prev .nav-next {
+  grid-area: 1 / 1;
+  align-self: center;
+  justify-self: end;
+}
+
+.related-posts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.related-posts__container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 20px;
+
+  margin-top: var(--section-margin-top-bottom);
+}
+
+/* Desktop + Pad only styling */
+@media (min-width: 768px) {
+  .post__image {
+    width: 100vw;
+    height: 550px;
+  }
+}
+
+/** 
+  * 1.3 Post Excerpt
+  *
+  */
+.post-excerpt__card h2,
+.post-excerpt__card h3,
+.post-excerpt__card p,
+.post-excerpt__date,
+.post-excerpt__button {
+  margin-left: var(--section-margin-left-right);
+  margin-right: var(--section-margin-left-right);
+}
+
+.post-excerpt__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  max-width: 35rem;
+  border-radius: 1em;
+}
+
+.post-excerpt__card h2,
+.post-excerpt__card h3 {
+  margin-top: 0;
+}
+
+.post-excerpt__image {
+  width: 100%;
+  height: 150px;
+
+  overflow: hidden;
+
+  object-fit: cover;
+
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  margin-bottom: 2.4rem;
+
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+}
+
+.post-excerpt__button {
+  display: block;
+  margin-bottom: 3.2rem;
+  max-width: fit-content;
+}
+
+.post-excerpt__date {
+  font-family: var(--font-text);
+  color: var(--clr-text-primary);
+}
+
+/** 
+  * 1.3 Sidebar
+  *
+  */
+
+.blog__sidebar {
+  display: none;
+  font-family: var(--font-text);
+}
+
+.blog__sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+@media (min-width: 1024px) {
+  .blog__sidebar {
+    display: flex;
+    grid-area: sidebar;
+
+    max-width: 20rem;
+
+    margin-left: 3.2rem;
+  }
+}
+
+/*--------------------------------------------------------------
+2.0 Blog Posts
+--------------------------------------------------------------*/
+
+/** 
+  * 2.1 Layout
+  *
+  */
+
+.lyrics {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+      "back"
+      "album-info"
+      "lyrics";
+  align-items: start;
+}
+
+.lyrics__back-to {
+  grid-area: back;
+  margin-top: var(--spacing-l);
+  margin-bottom: var(--spacing-m) !important;
+}
+
+.lyrics__title {
+  margin-bottom: 0.25rem;
+}
+
+.lyrics__composers {
+  display: block;
+  margin-bottom: var(--spacing-s);
+}
+
+.lyrics__content {
+  grid-area: lyrics;
+  margin-top: var(--spacing-s) !important;
+}
+
+.lyrics__album-info {
+  grid-area: album-info;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  margin-inline: auto;
+}
+
+.lyrics__cover-art {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.lyrics__song-list {
+  list-style: none;
+  padding: 0;
+}
+
+@media (min-width: 1024px) {
+  .lyrics {
+    grid-template-columns: 1fr 0.5fr;
+    grid-template-areas:
+      "back . "
+      "lyrics album-info";
+  }
+
+  .lyrics__back-to {
+    margin-top: var(--spacing-s);
+    margin-bottom: var(--spacing-s) !important;
+  }
+}

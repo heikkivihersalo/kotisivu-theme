@@ -1,0 +1,10 @@
+/*
+  Theme Name: Kotisivu Theme
+  Description: Lightweight WordPress theme with React integrations (child theme needs to be installed). Must be bundled with Custom Blocks for Kotisivu Theme and/or Dynamic Custom Blocks for Kotisivu Theme. Based on Brad's Boilerplate theme (https://github.com/LearnWebCode/brads-boilerplate-wordpress) and later on heavily modified.
+  Author: kotisivu.dev
+  Author URI: https://www.kotisivu.dev
+  Text Domain: kotisivu-theme
+  Version: 1.3.2
+*/
+
+/* This is just a file to hold theme information (because of WordPress). Styles are managed from child -theme 'assets/css' -folder */

@@ -1,0 +1,234 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Kotisivu Theme\n"
+"POT-Creation-Date: 2021-12-20 08:46+0200\n"
+"PO-Revision-Date: 2021-12-20 13:52+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+
+#: home.php:16
+msgid "Blog"
+msgstr "Blogi"
+
+#: inc/customizer.php:7
+msgid "Kotisivu Theme Options"
+msgstr "Kotisivu teeman asetukset"
+
+#: inc/customizer.php:8
+msgid "Setup theme options here."
+msgstr "Voit asettaa teeman asetukset täältä."
+
+#: inc/customizer.php:18
+msgid "Google Tag Manager"
+msgstr "Google Tag Manager"
+
+#: inc/customizer.php:19
+msgid ""
+"Set Tag Manager settings here. Tag Manager is optimized to work with "
+"Kotisivu Theme so it is highly recommended."
+msgstr ""
+"Voit asettaa Tag Managerin asetukset tästä. Kotisivu teema on optimoitu "
+"toimimaan Tag Managerin kanssa, joten tämän käyttö on suositeltavaa."
+
+#: inc/customizer.php:30
+msgid "ID"
+msgstr "ID"
+
+#: inc/customizer.php:31
+msgid "Add general GTM ID here. If empty, GTM is not loaded on front-end."
+msgstr ""
+"Lisää Tag Managerin ID -numero tähän. Jos tyhjä, Tag Manager jätetään "
+"lataamatta."
+
+#: inc/customizer.php:36
+msgid "Enter ID (GTM-XXXXXX)"
+msgstr "Syötä ID (GTM-XXXXXX)"
+
+#: inc/customizer.php:43 inc/customizer.php:54
+msgid "https://www.googletagmanager.com"
+msgstr "https://www.googletagmanager.com"
+
+#: inc/customizer.php:48
+msgid "URL"
+msgstr "URL"
+
+#: inc/customizer.php:49
+msgid "If GTM is loaded server-side, change the server url here."
+msgstr ""
+"Jos lataat Tag Managerin ‘server-side’ -puolelta, voit syöttää palvelimen "
+"osoitteen tähän."
+
+#: inc/customizer.php:62
+msgid "Timeout"
+msgstr "Viive"
+
+#: inc/customizer.php:63
+msgid ""
+"Sets the delay (in milliseconds) when GTM is loaded. Speeds up the site "
+"performance. Default is usually good."
+msgstr ""
+"Aseta Tag Managerin lataamisen viive. Nopeuttaa sivuston toimintaa. "
+"Oletusarvo on keskimäärin hyvä."
+
+#: inc/customizer.php:68
+msgid "Timeout (ms)"
+msgstr "Viive (ms)"
+
+#: inc/sidebars.php:6
+msgid "Footer Section 1"
+msgstr "Footer yläosa"
+
+#: inc/sidebars.php:8
+msgid "Add widgets to footer upper section"
+msgstr "Lisää widgettejä footerin yläosaan"
+
+#: inc/sidebars.php:16
+msgid "Footer Section 2"
+msgstr "Footer alaosa"
+
+#: inc/sidebars.php:18
+msgid "Add widgets to footer lower section"
+msgstr "Lisää widgettejä footerin yläosaan"
+
+#: inc/sidebars.php:28
+msgid "Blog Sidebar"
+msgstr "Blogin sivupalkki"
+
+#: single.php:32
+msgid "You may also like these"
+msgstr "Voit pitää myös näistä"
+
+#. Theme Name of the plugin/theme
+msgid "Kotisivu Theme"
+msgstr "Kotisivu Teema"
+
+#. Description of the plugin/theme
+msgid ""
+"Lightweight WordPress theme with React integrations (child theme needs to be "
+"installed). Must be bundled with Custom Blocks for Kotisivu Theme and/or "
+"Dynamic Custom Blocks for Kotisivu Theme. Based on Brad's Boilerplate theme "
+"(https://github.com/LearnWebCode/brads-boilerplate-wordpress) and later on "
+"heavily modified."
+msgstr ""
+"Nopea WordPress teema, joka integroituu näppärästi Reactin kanssa (vaatii "
+"lapsiteeman asentamisen). Täytyy käyttää yhdessä “Custom Blocks for "
+"Kotisivu” kanssa. Teema on rakennettu Brad’s Boilerplate (https://github.com/"
+"LearnWebCode/brads-boilerplate-wordpress) teeman päälle ja tämän jälkeen "
+"hyvin vahvasti modifioitu."
+
+#. Author of the plugin/theme
+msgid "kotisivu.dev"
+msgstr "kotisivu.dev"
+
+#. Author URI of the plugin/theme
+msgid "https://www.kotisivu.dev"
+msgstr "https://www.kotisivu.dev"
+
+#: inc/register-post-types.php:12 inc/register-post-types.php:13
+#: inc/register-post-types.php:14
+msgid "FAQ"
+msgstr "FAQ"
+
+#: inc/register-post-types.php:15 inc/register-post-types.php:18
+msgid "New Question"
+msgstr "Uusi kysymys"
+
+#: inc/register-post-types.php:16
+msgid "Add New Question"
+msgstr "Lisää uusi kysymys"
+
+#: inc/register-post-types.php:17
+msgid "Edit Question"
+msgstr "Muokkaa kysymystä"
+
+#: inc/register-post-types.php:19
+msgid "View Questions"
+msgstr "Näytä kysymykset"
+
+#: inc/register-post-types.php:20
+msgid "Search Questions"
+msgstr "Hae kysymyksiä"
+
+#: inc/register-post-types.php:21
+msgid "No Questions Found"
+msgstr "Kysymyksiä ei löydy"
+
+#: inc/register-post-types.php:22
+msgid "No Questions found in Trash"
+msgstr "Kysymyksiä ei löydy roskakorista"
+
+#: inc/register-post-types.php:61 inc/register-post-types.php:63
+msgid "Services"
+msgstr "Palvelut"
+
+#: inc/register-post-types.php:62
+msgid "Service"
+msgstr "Palvelu"
+
+#: inc/register-post-types.php:64 inc/register-post-types.php:67
+msgid "New Service"
+msgstr "Lisää palvelu"
+
+#: inc/register-post-types.php:65
+msgid "Add New Service"
+msgstr "Lisää uusi palvelu"
+
+#: inc/register-post-types.php:66
+msgid "Edit Service"
+msgstr "Muokkaa palvelua"
+
+#: inc/register-post-types.php:68
+msgid "View Services"
+msgstr "Näytä palvelut"
+
+#: inc/register-post-types.php:69
+msgid "Search Services"
+msgstr "Etsi palveluita"
+
+#: inc/register-post-types.php:70
+msgid "No Services Found"
+msgstr "Palveluita ei löydy"
+
+#: inc/register-post-types.php:71
+msgid "No Services found in Trash"
+msgstr "Palveluita ei löydy roskakorista"
+
+#: template-parts/post/content-excerpt.php:6
+#: template-parts/post/content-meta.php:10
+msgid "Posted on:"
+msgstr "Julkaistu:"
+
+#: template-parts/post/content-excerpt.php:10
+msgid "Read more"
+msgstr "Lue lisää"
+
+#. Theme Name of the plugin/theme
+msgid "Kotisivu Theme Child"
+msgstr "Kotisivu Theme Child"
+
+#. Description of the plugin/theme
+msgid ""
+"Child theme for Kotisivu Theme. May be used to embed React applications or "
+"custom styling to the page."
+msgstr ""
+"Kotisivu teeman lapsiteema. Voidaan käyttää sivun ulkoasun muokkaukseen tai "
+"React -sovelluksien upottamiseen."
+
+#. Author of the plugin/theme
+msgid "Kotisivu Dev"
+msgstr "Kotisivu Dev"
