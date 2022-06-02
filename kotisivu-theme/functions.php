@@ -23,7 +23,11 @@ function load_assets() {
   /* Load primary styles */
   wp_enqueue_style('style');
 
+  /*  DISABLE GUTENBERG STYLE IN HEADER| WordPress 5.9 */
+  wp_dequeue_style( 'global-styles' );
+
 }
+
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\load_assets');
 
 
