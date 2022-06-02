@@ -71,17 +71,27 @@ html {
   margin: 1em 0em;
 }
 
-/* Widget area full width */
-.wp-block[data-type="core/widget-area"],
-.blocks-widgets-container .editor-styles-wrapper {
-  width: 100%;
-  max-width: 100%;
+/* Center render-appender */
+.block-editor-block-list__block .block-list-appender:only-child {
+  margin-inline: auto;
 }
 
-.wp-block[data-type="core/widget-area"] {
-  padding-left: 3.2rem;
-  padding-right: 3.2rem;
+.block-editor-block-list__block .block-list-appender:not(.ksd-column .block-list-appender) {
+  transform: translate(-1em, 2rem);
 }
+
+.ksd-editor-btn--placeholder {
+  --color: rgb(64, 64, 64);
+  background-color: transparent;
+  padding: 0.5em 1em 0.5em 1em;
+  border: dotted 2px var(--color);
+  color: var(--color);
+}
+
+html :where(.wp-block)[data-align=full] {
+  width: 100%;
+}
+
 
 /*--------------------------------------------------------------
 2.0 General Styling
@@ -411,216 +421,3 @@ html {
   margin-bottom: 1rem;
   
 }
-
-/*--------------------------------------------------------------
-5.0 Static Blocks
---------------------------------------------------------------*/
-
-/**
- * 5.1 Address
- *
- */
-
-.address__content {
-  font-size: var(--ff-p);
-  font-family: var(--font-body);
-}
-
-/**
- * 5.2 Basic Image
- *
- */
-
-/**
- * 5.3 Button
- *
- */
-
-/**
- * 5.4 Button Container
- *
- */
-
-.btn-container .block-editor-inner-blocks,
-.btn-container .block-editor-block-list__block {
-  width: 100%;
-}
-
-.btn-container .block-editor-block-list__layout {
-  display: flex;
-  flex-direction: row;
-  gap: 15px;
-
-  width: 100%;
-  max-width: 100rem;
-
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
-
-/**
- * 5.5 Contact Form
- *
- */
-
-.contact-form__columns-container .block-editor-block-list__layout {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-}
-
-.contact-form__columns-container .block-editor-block-list__layout > div {
-  margin: 0;
-}
-.contact-form__columns-container .block-editor-block-list__layout div {
-  width: 100%;
-}
-
-.contact-form__textarea {
-  border-radius: 4px;
-  border: 1px solid #8c8f94;
-}
-
-/**
- * 5.6 Grid Card
- *
- */
-
-.hero-grid__card > div {
-  margin: 0;
-}
-
-/**
- * 5.7 Column Container
- *
- */
-
-.column-container
-  .block-editor-block-list__layout:not([data-type="ksd/grid-column"]
-    .block-editor-block-list__layout) {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr;
-  grid-auto-flow: row;
-}
-
-/**
- * 5.8 Grid Two-Column
- *
- */
-
-.section-grid-two-column__column {
-  z-index: 0 !important;
-}
-
-/**
- * 5.9 Icon Container
- *
- */
-
-.icon-container .block-editor-block-list__layout {
-  display: flex;
-  flex-direction: row;
-  gap: var(--ff-h5);
-
-  width: 100%;
-}
-
-.editor-styles-wrapper .icon-container.wp-block {
-  margin-left: initial;
-  margin-right: initial;
-}
-
-.icon {
-  width: calc(var(--ff-h2) * 1.2) !important;
-  height: calc(var(--ff-h2) * 1.2) !important;
-}
-
-.icon__link {
-  font-size: calc(var(--ff-h2) * 1.2) !important;
-  color: var(--clr-brand-primary) !important;
-}
-
-.icon__link:hover {
-  color: var(--clr-highlight) !important;
-}
-
-/**
- * 5.10 Price Tag
- *
- */
-
-/**
- * 5.11 Pricing Table
- *
- */
-
-.pricing-table {
-  display: initial;
-}
-
-.wp-block.pricing-table__column {
-  width: 100%;
-}
-.pricing-table
-  .block-editor-block-list__layout:not([data-type="ksd/pricing-column"]
-    .block-editor-block-list__layout) {
-  display: grid;
-  justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(225px, 16rem));
-  gap: var(--spacing-xs);
-
-  margin-top: var(--spacing-s);
-  text-align: center;
-}
-
-/**
- * 5.11 Section Container
- *
- */
-
-.section.has-image {
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-.section.has-image > img,
-.section.has-image > picture {
-  grid-area: 1 / 1;
-  justify-self: center;
-  width: 100%;
-  height: 100%;
-
-  object-position: center center;
-  object-fit: cover;
-  overflow: hidden;
-}
-
-.section.has-image > div {
-  grid-area: 1 / 1;
-  justify-self: center;
-  width: 100%;
-  height: fit-content;
-
-  z-index: 1;
-}
-
-/*--------------------------------------------------------------
-6.0 Dynamic Blocks
---------------------------------------------------------------*/
-
-/**
- * 6.1 FAQ
- *
- */
-
-/**
- * 6.2 Footer Navigation
- *
- */
-
-/**
- * 6.3 Services Grid
- *
- */
