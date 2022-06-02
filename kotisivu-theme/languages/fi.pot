@@ -1,15 +1,15 @@
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Kotisivu Theme\n"
 "POT-Creation-Date: 2022-05-24 12:15+0300\n"
-"PO-Revision-Date: 2022-05-24 13:25+0300\n"
+"PO-Revision-Date: 2022-05-24 12:14+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: fi_FI\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "X-Generator: Poedit 3.0.1\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
@@ -23,125 +23,123 @@ msgstr ""
 
 #: 404.php:6
 msgid "Page not found"
-msgstr "Sivua ei löydy"
+msgstr ""
 
 #: inc/settings-page.php:18
 msgid "Kotisivu Theme Settings"
-msgstr "Kotisivu teeman asetukset"
+msgstr ""
 
 #. Theme Name of the plugin/theme
 #: inc/settings-page.php:19
 msgid "Kotisivu Theme"
-msgstr "Kotisivu teema"
+msgstr ""
 
 #: inc/settings-page.php:90
 msgid "Theme settings"
-msgstr "Teeman asetukset"
+msgstr ""
 
 #: inc/settings-page.php:91
 msgid "You can access theme options in here."
-msgstr "Voit muokata teeman asetuksia täältä."
+msgstr ""
 
 #: inc/settings-page.php:100
 msgid "Google Tag Manager"
-msgstr "Google Tag Manager"
+msgstr ""
 
 #: inc/settings-page.php:102
 msgid ""
 "Set Tag Manager settings here. Tag Manager is optimized to work with "
 "Kotisivu Theme so it is highly recommended."
 msgstr ""
-"Aseta Tag Managerin asetukset tähän. Tag Manager on optimoitu toimimaan "
-"Kotisivu-teeman kanssa, joten tämän käyttöönotto on erittäin suotavaa."
 
 #: inc/settings-page.php:114
 msgid "Activate Tag Manager"
-msgstr "Aktivoi Tag Manager"
+msgstr ""
 
 #: inc/settings-page.php:121
 msgid "ID"
-msgstr "ID"
+msgstr ""
 
 #: inc/settings-page.php:135
 msgid "URL"
-msgstr "URL"
+msgstr ""
 
 #: inc/settings-page.php:149
 msgid "Timeout"
-msgstr "Aika"
+msgstr ""
 
 #: inc/settings-page.php:165
 msgid "Font Awesome"
-msgstr "Font Awesome"
+msgstr ""
 
 #: inc/settings-page.php:168
 msgid "Load Font Awesome Assets"
-msgstr "Lataa Font Awesome resurssit"
+msgstr ""
 
 #: inc/settings-page.php:219
 msgid "Other Options"
-msgstr "Muut vaihtoehdot"
+msgstr ""
 
 #: inc/settings-page.php:225
 msgid "jQuery loading"
-msgstr "jQueryn lataus"
+msgstr ""
 
 #: inc/settings-page.php:243
 msgid "Hide branding on footer"
-msgstr "Piilota brändäys sivuston alatunnisteesta"
+msgstr ""
 
 #: inc/settings-page.php:250
 msgid "Save"
-msgstr "Tallenna"
+msgstr ""
 
 #: inc/theme-parts.php:77
 msgid "Footer Section 1"
-msgstr "Alatunnisteen osa 1"
+msgstr ""
 
 #: inc/theme-parts.php:79
 msgid "Add widgets to footer upper section"
-msgstr "Lisää widgettejä footerin yläosaan"
+msgstr ""
 
 #: inc/theme-parts.php:87
 msgid "Footer Section 2"
-msgstr "Alatunnisteen osa 2"
+msgstr ""
 
 #: inc/theme-parts.php:89
 msgid "Add widgets to footer lower section"
-msgstr "Lisää widgettejä footerin yläosaan"
+msgstr ""
 
 #: inc/theme-parts.php:100
 msgid "Blog Sidebar"
-msgstr "Blogin Sivupalkki"
+msgstr ""
 
 #: inc/theme-parts.php:132
 msgid "Retina"
-msgstr "Retina"
+msgstr ""
 
 #: inc/theme-parts.php:133
 msgid "Huge"
-msgstr "Jättimäinen"
+msgstr ""
 
 #: inc/theme-parts.php:134
 msgid "Medium Large"
-msgstr "Keskisuuri"
+msgstr ""
 
 #: inc/theme-parts.php:135
 msgid "Extra Small"
-msgstr "Erittäin pieni"
+msgstr ""
 
 #: single-post.php:37
 msgid "You may also like these"
-msgstr "Saatat myös pitää näistä"
+msgstr ""
 
 #: template-parts/post/content-excerpt.php:6
 #: template-parts/post/content-meta.php:5
 msgid "Posted on:"
-msgstr "Julkaistu:"
+msgstr ""
 
 #: template-parts/post/content-excerpt.php:10
 msgid "Read more"
-msgstr "Lue lisää"
+msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
@@ -151,16 +149,11 @@ msgid ""
 "(https://github.com/LearnWebCode/brads-boilerplate-wordpress) and later on "
 "heavily modified."
 msgstr ""
-"Kevyt WordPress-teema React-integraatiolla (vaatii lapsiteeman). Se on "
-"yhdistettävä Kotisivu-teeman mukautettuihin lohkoihin ja/tai Kotisivu-teeman "
-"dynaamisiin mukautettuihin lohkoihin. Perustuu Bradin Boilerplate-teemaan "
-"(https://github.com/LearnWebCode/brads-boilerplate-wordpress) ja myöhemmin "
-"voimakkaasti muokattuun."
 
 #. Author of the plugin/theme
 msgid "kotisivu.dev"
-msgstr "kotisivu.dev"
+msgstr ""
 
 #. Author URI of the plugin/theme
 msgid "https://www.kotisivu.dev"
-msgstr "https://www.kotisivu.dev"
+msgstr ""
