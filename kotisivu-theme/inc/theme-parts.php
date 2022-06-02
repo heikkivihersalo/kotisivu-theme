@@ -20,7 +20,7 @@ namespace Kotisivu\Theme;
  * Disable theme updates
  * 
  */
-function disable_theme_update( $response, $url ) {
+function disable_theme_update($response, $url) {
     /**
      * Ensure that a theme is never updated. This works by removing the
      * theme from the list of available updates.
@@ -31,11 +31,11 @@ function disable_theme_update( $response, $url ) {
      * https://markjaquith.wordpress.com/2009/12/14/excluding-your-plugin-or-theme-from-update-checks/
      * 
      */
-    if ( 0 === strpos( $url, 'https://api.wordpress.org/themes/update-check' ) ) {
-        $themes = json_decode( $response['body']['themes'] );
-        unset( $themes->themes->{'kotisivu-theme'} );
-        unset( $themes->themes->{'style'} );
-        $response['body']['themes'] = json_encode( $themes );
+    if (0 === strpos($url, 'https://api.wordpress.org/themes/update-check')) {
+        $themes = json_decode($response['body']['themes']);
+        unset($themes->themes->{'kotisivu-theme'});
+        unset($themes->themes->{'style'});
+        $response['body']['themes'] = json_encode($themes);
     }
 
     return $response;
@@ -52,6 +52,10 @@ function add_support() {
     add_theme_support('align-wide');
     add_theme_support('custom-logo');
     add_theme_support('menus');
+    add_theme_support('disable-custom-colors');
+    remove_theme_support('editor-color-palette');
+    remove_theme_support('editor-font-sizes');
+    remove_theme_support('core-block-patterns');
 }
 
 /**
@@ -59,7 +63,7 @@ function add_support() {
  * 
  */
 function register_navigation_menus() {
-    register_nav_menus( array (
+    register_nav_menus(array(
         'header-menu' => 'Header',
         'footer-menu' => 'Footer',
         'legal-menu' => 'Legal',
@@ -69,31 +73,31 @@ function register_navigation_menus() {
 
 
 function register_footer_sidebars() {
-    register_sidebar( array(
-        'name'          => esc_html__( 'Footer Section 1', 'kotisivu-theme' ),
+    register_sidebar(array(
+        'name'          => esc_html__('Footer Section 1', 'kotisivu-theme'),
         'id'            => 'footer-section-1',
-        'description'   => esc_html__( 'Add widgets to footer upper section', 'kotisivu-theme' ),
+        'description'   => esc_html__('Add widgets to footer upper section', 'kotisivu-theme'),
         'before_widget' => '',
         'after_widget'  => '',
         'before_title'  => '',
         'after_title'   => '',
     ));
-    
-    register_sidebar( array(
-        'name'          => esc_html__( 'Footer Section 2', 'kotisivu-theme' ),
+
+    register_sidebar(array(
+        'name'          => esc_html__('Footer Section 2', 'kotisivu-theme'),
         'id'            => 'footer-section-2',
-        'description'   => esc_html__( 'Add widgets to footer lower section', 'kotisivu-theme' ),
+        'description'   => esc_html__('Add widgets to footer lower section', 'kotisivu-theme'),
         'before_widget' => '',
         'after_widget'  => '',
         'before_title'  => '',
         'after_title'   => '',
-   ));
+    ));
 }
-  
+
 
 function register_blog_sidebars() {
-    register_sidebar( array(
-        'name'          => __( 'Blog Sidebar', 'kotisivu-theme' ),
+    register_sidebar(array(
+        'name'          => __('Blog Sidebar', 'kotisivu-theme'),
         'id'            => 'sidebar-1',
         'before_widget' => '',
         'after_widget'  => '',
@@ -109,24 +113,26 @@ function register_blog_sidebars() {
  */
 function image_support() {
     /* Update standard image sizes */
-    update_option( 'large_size_w', 1600 ); update_option( 'large_size_h', 1200 );
-    update_option( 'medium_size_w', 1024 ); update_option( 'medium_size_h', 768 );
-    
+    update_option('large_size_w', 1600);
+    update_option('large_size_h', 1200);
+    update_option('medium_size_w', 1024);
+    update_option('medium_size_h', 768);
+
     /* Add new image sizes */
-    add_image_size( 'retina', 2880, 1800 );
-    add_image_size( 'huge', 1920, 1440 );
-    add_image_size( 'medium_large', 1366, 1025 );
-    add_image_size( 'small', 768, 576 );
-    add_image_size( 'extra_small', 640, 480 );
+    add_image_size('retina', 2880, 1800);
+    add_image_size('huge', 1920, 1440);
+    add_image_size('medium_large', 1366, 1025);
+    add_image_size('small', 768, 576);
+    add_image_size('extra_small', 640, 480);
 }
 
 
-function add_custom_sizes_to_admin( $sizes ) {
-    return array_merge( $sizes, array(
-      'retina' => __( 'Retina', 'kotisivu-theme' ),
-      'huge' => __( 'Huge', 'kotisivu-theme' ),
-      'medium_large' => __( 'Medium Large', 'kotisivu-theme' ),
-      'extra_small' => __( 'Extra Small', 'kotisivu-theme' ),
+function add_custom_sizes_to_admin($sizes) {
+    return array_merge($sizes, array(
+        'retina' => __('Retina', 'kotisivu-theme'),
+        'huge' => __('Huge', 'kotisivu-theme'),
+        'medium_large' => __('Medium Large', 'kotisivu-theme'),
+        'extra_small' => __('Extra Small', 'kotisivu-theme'),
     ));
 }
 
@@ -154,27 +160,27 @@ function limit_excerpt_length($length) {
  * Disable jQuery
  * 
  */
-function remove_jquery( ){
+function remove_jquery() {
 
-    $jquery = get_option( 'other_settings' )['jquery'];
+    $jquery = get_option('other_settings')['jquery'];
 
     /* If user is logged in or jquery is loaded normally, return nothing */
-    if ($jquery == 'normal' || is_user_logged_in() ) return;
+    if ($jquery == 'normal' || is_user_logged_in()) return;
 
     /** 
      * Load jQuery on footer
-     */ 
+     */
     if ($jquery == 'footer') {
-        wp_scripts()->add_data( 'jquery', 'group', 1 );
-        wp_scripts()->add_data( 'jquery-core', 'group', 1 );
-        wp_scripts()->add_data( 'jquery-migrate', 'group', 1 );
+        wp_scripts()->add_data('jquery', 'group', 1);
+        wp_scripts()->add_data('jquery-core', 'group', 1);
+        wp_scripts()->add_data('jquery-migrate', 'group', 1);
     }
 
     /** 
      * Disable jQuery from loading
-     */ 
+     */
     if ($jquery == 'disable') {
-        wp_dequeue_script( 'jquery');
-        wp_deregister_script( 'jquery');
+        wp_dequeue_script('jquery');
+        wp_deregister_script('jquery');
     }
 }
